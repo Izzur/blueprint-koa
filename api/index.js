@@ -9,7 +9,7 @@ const baseName = path.basename(__filename);
 
 function applyApiMiddleware(app) {
   const router = new Router({
-    prefix: `/api/${apiVersion}`,
+    prefix: `/api/v${apiVersion}`,
   });
 
   // Require all the folders and create a sub-router for each feature api
