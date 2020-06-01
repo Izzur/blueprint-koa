@@ -1,28 +1,26 @@
 'use strict';
 
-const joi = require('joi');
+const Joi = require('@hapi/joi');
 
 /**
  * Generate a validation schema using joi to check the type of your environment variables
  */
-const envSchema = joi
-  .object({
-    DB_USER: joi.string(),
-    DB_HOST: joi.string(),
-    DB_PASSWORD: joi
-      .string()
-      .optional()
-      .empty(''),
-    DB_DATABASE: joi.string(),
-    DB_PORT: joi.number(),
-  })
+const envSchema = Joi.object({
+  DB_USER: Joi.string(),
+  DB_HOST: Joi.string(),
+  DB_PASSWORD: Joi.string()
+    .optional()
+    .empty(''),
+  DB_DATABASE: Joi.string(),
+  DB_PORT: Joi.number(),
+})
   .unknown()
   .required();
 
 /**
  * Validate the env variables using joi.validate()
  */
-const { error, value: envVars } = joi.validate(process.env, envSchema);
+const { error, value: envVars } = envSchema.validate(process.env);
 if (error) {
   throw new Error(`Config validation error: ${error.message}`);
 }
