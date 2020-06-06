@@ -21,12 +21,7 @@ if (isDevelopment) {
 /**
  * Pass to our server instance middlewares
  */
-server
-  .use(errorHandler)
-  .use(helmet)
-  .use(compress)
-  .use(cors)
-  .use(bodyParser);
+server.use(errorHandler).use(helmet).use(compress).use(cors).use(bodyParser);
 
 /**
  * Apply to our server the api router

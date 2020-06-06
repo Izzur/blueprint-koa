@@ -8,9 +8,7 @@ const Joi = require('@hapi/joi');
 const envSchema = Joi.object({
   DB_USER: Joi.string(),
   DB_HOST: Joi.string(),
-  DB_PASSWORD: Joi.string()
-    .optional()
-    .empty(''),
+  DB_PASSWORD: Joi.string().optional().empty(''),
   DB_DATABASE: Joi.string(),
   DB_PORT: Joi.number(),
 })
