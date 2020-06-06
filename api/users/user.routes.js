@@ -2,7 +2,7 @@
 
 const controller = require('./user.controller');
 
-module.exports = Router => {
+module.exports = (Router) => {
   const router = new Router({
     prefix: `/users`,
   });
