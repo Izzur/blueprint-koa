@@ -40,7 +40,7 @@
     "koa-helmet": "5.2.0",
     "koa-logger": "3.2.1",
     "koa-router": "9.0.1",
-    "mariadb": "^2.4.0",
+    "pg": "^8.2.1",
     "uuid": "8.2.0"
   },
   "repository": {
