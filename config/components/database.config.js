@@ -23,6 +23,14 @@ if (error) {
   throw new Error(`Config validation error: ${error.message}`);
 }
 
+const sequelizeConfig = {
+  username: envVars.DB_USER,
+  password: envVars.DB_PASSWORD,
+  database: envVars.DB_DATABASE,
+  host: envVars.DB_HOST,
+  dialect: 'postgres',
+};
+
 const config = {
   databaseConfig: {
     user: envVars.DB_USER,
@@ -31,6 +39,9 @@ const config = {
     database: envVars.DB_DATABASE,
     port: envVars.DB_PORT,
   },
+  development: sequelizeConfig,
+  test: sequelizeConfig,
+  production: sequelizeConfig,
 };
 
 module.exports = config;
