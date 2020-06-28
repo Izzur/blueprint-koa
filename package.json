@@ -26,7 +26,6 @@
     "husky": "4.2.5",
     "nodemon": "2.0.4",
     "prettier": "2.0.5",
-    "sequelize": "^6.2.2",
     "sequelize-cli": "^6.1.0"
   },
   "dependencies": {
@@ -41,6 +40,7 @@
     "koa-logger": "3.2.1",
     "koa-router": "9.0.1",
     "pg": "^8.2.1",
+    "sequelize": "^6.2.2",
     "uuid": "8.2.0"
   },
   "repository": {
