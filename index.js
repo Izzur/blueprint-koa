@@ -3,7 +3,7 @@
 const http = require('http');
 const server = require('./server');
 
-const { port } = require('./config').server;
+const { port } = require('./src/config').server;
 
 async function bootstrap() {
   /**

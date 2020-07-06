@@ -12,10 +12,6 @@ RUN npm install --production && npm cache clean --force --loglevel=error
 
 COPY --chown=node:node index.js .
 COPY --chown=node:node server.js .
-COPY --chown=node:node api ./api/
-COPY --chown=node:node config ./config/
-COPY --chown=node:node db ./db/
-COPY --chown=node:node middleware ./middleware/
-COPY --chown=node:node utils ./utils/
+COPY --chown=node:node src ./src/
 
 CMD [ "node", "index.js"]
