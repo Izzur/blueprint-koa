@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+
+  app:
+    container_name: container-app
+    build: .
+    depends_on: 
+      - db
+    env_file: .env
+    ports:
+      - "${PORT}:${PORT}"
+  db:
+    container_name: container-db
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
