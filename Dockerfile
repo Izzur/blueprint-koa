@@ -13,5 +13,6 @@ RUN npm install --production && npm cache clean --force --loglevel=error
 COPY --chown=node:node index.js .
 COPY --chown=node:node server.js .
 COPY --chown=node:node src ./src/
+COPY --chown=node:node .sequelizerc .
 
 CMD [ "node", "index.js"]

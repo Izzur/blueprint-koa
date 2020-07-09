@@ -7,6 +7,7 @@ services:
     depends_on: 
       - db
     env_file: .env
+    init: true
     ports:
       - "${PORT}:${PORT}"
   db:
